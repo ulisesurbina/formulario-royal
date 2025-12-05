@@ -12,30 +12,28 @@
   width: 100%;
   max-width: 600px;
   padding: 2rem;
-  position: relative;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #FFFFFF;
   border: 1px solid #333;
   border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-align: center;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #00bfff;
+  font-weight: 600;
+  display: block;
+  color: #00b5ff; /* ligero ajuste para mejor contraste */
 }
 
 .message {
   font-size: 1rem;
-  color: #ffff;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .borderNone {
@@ -58,7 +56,8 @@
 
 .form label {
   position: relative;
-  background: linear-gradient(#1e1d23, #3b3944) padding-box, linear-gradient(45deg, #0063AD, #e2bdd0) border-box;
+  background: linear-gradient(#1d1c23, #403e49) padding-box,
+              linear-gradient(45deg, #0063AD, #e2bdd0) border-box;
   border: 2px solid transparent;
   border-radius: 10px;
   width: auto;
@@ -66,35 +65,26 @@
 
 .form label .input {
   background-color: transparent;
-  color: #fff;
+  color: #FFFFFF;
   width: 95%;
-  margin: 20px auto 05px auto;
+  margin: 20px auto 5px auto;
   outline: 0;
   border: none;
-  display: flex;
-  justify-content: center;
 }
 
 .form label .input + span {
-  color: #ffff;
+  color: #FFFFFF;
   position: absolute;
   left: 10px;
-  top: 0px;
+  top: 12px;
   font-size: 0.9em;
-  cursor: text;
   transition: 0.3s ease;
-}
-
-.form label .input:placeholder-shown + span {
-  top: 12.5px;
-  font-size: 0.9em;
 }
 
 .form label .input:focus + span,
 .form label .input:valid + span {
-  color: #ffff;
   top: 0px;
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 600;
 }
 
@@ -103,18 +93,20 @@
 }
 
 .submit {
+  cursor: pointer;
   border: none;
-  outline: none;
   padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
   background-color: #0063AD;
-  width: 45%;
+  width: 55%;
   margin: 0 auto;
+  transition: all .3s ease;
+  border-radius: 1rem;
 }
 
 .submit:hover {
-  background-color: #0063AD;
+  background-color: #00569a;
+  color: #FFFFFF;
 }
