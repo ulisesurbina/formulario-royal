@@ -2,42 +2,41 @@ import "./Form.css";
 
 function Form() {
   return (
-    <div>
+    <div className="form-container">
       <form class="form">
-        <p class="title">Necesitas ayuda, registrate y te contactaremos</p>
-        <p class="message">Ingresa tus datos para conocer más sobre la marca</p>
+        <p class="title">¿Buscas información o ayuda con algún producto?</p>
+        <p class="message">Queremos acompañarte: Cuéntanos qué necesitas y te contactaremos.</p>
         <label>
           <input class="input" type="text" placeholder="" required="" />
-          <span>Nombre</span>
+          <span>Tu nombre</span>
         </label>
         <label>
           <input class="input" type="text" placeholder="" required="" />
-          <span>Apellido</span>
+          <span>Tu apellido</span>
         </label>
         <label>
           <input class="input" type="email" placeholder="" required="" />
-          <span>Número de teléfono</span>
+          <span>Tu teléfono</span>
         </label>
         <div className="flex">
-          <span className="">¿Eres cliente de la marca?:</span>
-          <label className="">
+          <span className="">¿Ya eres parte de la familia Royal Prestige?</span>
+          <label className="borderNone">
             <input
               type="radio"
               className=""
               name="gender"
               value="Male"
             />
-            <span className="">Sí</span>
+            <span>Sí, ya tengo productos</span>
           </label>
-
-          <label className="">
+          <label className="borderNone">
             <input
               type="radio"
               className=""
               name="gender"
               value="Female"
             />
-            <span className="">No</span>
+            <span>Todavía no, pero quiero saber más</span>
           </label>
         </div>
 
@@ -48,9 +47,9 @@ function Form() {
             rows="3"
             required=""
           ></textarea>
-          <span>Comentarios</span>
+          <span>Cuéntanos cómo podemos apoyarte</span>
         </label>
-        <button class="submit">Enviar</button>
+        <button class="submit">Quiero recibir información</button>
       </form>
     </div>
   );
