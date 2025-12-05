@@ -50,3 +50,13 @@ section::after {
     height: auto;
   }
 }
+
+@media (max-width: 600px) {
+  .logoRoyal {
+    width: 10rem;
+  }
+  section::before, 
+  section::after {
+    left: 27%;
+  }
+}
