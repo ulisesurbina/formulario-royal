@@ -26,34 +26,11 @@
 .title {
   font-size: 1.5rem;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 7rem;
   color: #00bfff;
-}
-
-.title::before {
-  width: 4rem;
-  height: 4rem;
-}
-
-.title::after {
-  width: 4rem;
-  height: 4rem;
-  animation: pulse 1s linear infinite;
-}
-
-.title::before,
-.title::after {
-  position: absolute;
-  content: "";
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  left: 5%;
-  background-color: #00bfff;
 }
 
 .message {
@@ -139,16 +116,4 @@
 
 .submit:hover {
   background-color: #0063AD;
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1.8);
-    opacity: 0;
-  }
 }

@@ -1,13 +1,50 @@
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section::before,
+section::after {
+  position: absolute;
+  content: "";
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  left: 42%;
+  background-color: #00bfff;
+  z-index: 1;
+}
+
+section::before {
+  width: 10rem;
+  height: 10rem;
+}
+
+section::after {
+  width: 10rem;
+  height: 10rem;
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 .logoRoyal {
   width: 20%;
   height: auto;
-  margin: 2rem;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2;
   & img {
     width: 100%;
     height: auto;
