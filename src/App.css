@@ -2,29 +2,39 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-section::before,
+section::before {
+  position: absolute;
+  content: "";
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: #00bfff;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
 section::after {
   position: absolute;
   content: "";
-  height: 10rem;
-  width: 10rem;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
-  left: 42%;
   background-color: #00bfff;
   z-index: 1;
 }
 
-section::before {
-  width: 10rem;
-  height: 10rem;
-}
-
 section::after {
-  width: 10rem;
-  height: 10rem;
   animation: pulse 1s linear infinite;
+  -webkit-animation: pulse 1s linear infinite;
 }
 
 @keyframes pulse {
@@ -40,7 +50,7 @@ section::after {
 }
 
 .logoRoyal {
-  width: 20%;
+  width: 28%;
   height: auto;
   margin: 2rem 0;
   position: relative;
@@ -51,12 +61,25 @@ section::after {
   }
 }
 
+@media (min-width: 1520px) {
+  section::before {
+    height: 10vw;
+    width: 10vw;
+  }
+  section::after {
+    height: 11vw;
+    width: 11vw;
+  }
+}
+
 @media (max-width: 600px) {
   .logoRoyal {
     width: 10rem;
   }
-  section::before, 
-  section::after {
-    left: 27%;
+}
+
+@media (max-width: 420px) {
+  .logoRoyal {
+    width: 10rem;
   }
 }

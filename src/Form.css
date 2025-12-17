@@ -13,7 +13,7 @@
   max-width: 600px;
   padding: 2rem;
   background-color: #1a1a1a;
-  color: #FFFFFF;
+  color: #ffffff;
   border: 1px solid #333;
   border-radius: 1rem;
 }
@@ -28,12 +28,13 @@
 
 .message {
   font-size: 1rem;
-  color: #FFFFFF;
+  color: #ffffff;
+  text-align: center;
 }
 
 .subtitle {
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 0.2rem;
 }
 
 .borderNone {
@@ -47,7 +48,8 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  gap: 6px;
+  gap: 1rem;
+  font-size: 1rem;
 }
 
 .form p {
@@ -57,34 +59,39 @@
 .form label {
   position: relative;
   background: linear-gradient(#1d1c23, #403e49) padding-box,
-              linear-gradient(45deg, #0063AD, #e2bdd0) border-box;
+    linear-gradient(45deg, #0063ad, #e2bdd0) border-box;
   border: 2px solid transparent;
-  border-radius: 10px;
-  width: auto;
+  border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -ms-border-radius: 0.8rem;
+  -o-border-radius: 0.8rem;
 }
 
 .form label .input {
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 95%;
-  margin: 20px auto 5px auto;
+  margin: 1rem auto 0.25rem auto;
   outline: 0;
   border: none;
+  font-size: 1rem;
 }
 
 .form label .input + span {
-  color: #FFFFFF;
+  color: #ffffff;
   position: absolute;
-  left: 10px;
-  top: 12px;
-  font-size: 0.9em;
+  left: 1rem;
+  top: 0.4rem;
+  font-size: 0.8rem;
   transition: 0.3s ease;
 }
 
 .form label .input:focus + span,
 .form label .input:valid + span {
-  top: 0px;
-  font-size: 0.8em;
+  top: 0;
+  left: 0.2rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
@@ -96,17 +103,46 @@
   cursor: pointer;
   border: none;
   padding: 10px;
-  color: #FFFFFF;
-  font-size: 1rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
   font-weight: 600;
-  background-color: #0063AD;
-  width: 55%;
+  background-color: #0063ad;
+  width: 40%;
   margin: 0 auto;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   border-radius: 1rem;
 }
 
 .submit:hover {
-  background-color: #00569a;
-  color: #FFFFFF;
+  background-color: #153651;
+  color: #ffffff;
+}
+
+@media (min-width: 1520px) {
+  .title {
+    font-size: 1.3vw;
+  }
+  .message {
+    font-size: 1.1vw;
+  }
+  .form label .input + span {
+    font-size: 0.9vw;
+  }
+  .form label .input {
+    font-size: 1vw;
+  }
+  .flex {
+    font-size: 1vw;
+  }
+  .submit {
+    font-size: 1vw;
+    line-height: 1.3vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .submit {
+    width: 55%;
+  }
 }
